@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-box {
+            background-color: #f8e8d4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 900px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: rgb(145, 14, 14);
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .header-icons i {
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .btn-return, .btn-cancelar, .btn-transferir {
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 6px 15px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .btn-return {
+            background-color: #28a745;
+        }
+
+        .btn-cancelar {
+            background-color: #dc3545;
+        }
+
+        .btn-transferir {
+            background-color: #007bff;
+        }
+
+        .btn-desconto {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        .btn-return:hover {
+            background-color: #218838;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #c82333;
+        }
+
+        .btn-transferir:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-discount:hover {
+            background-color: #e0a800;
+        }
+
+        .table-items {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .table-items th, .table-items td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        .table-items th {
+            background-color: #f8f9fa;
+        }
+
+        .add-item-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .add-item-section input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .add-item-section button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .add-item-section button:hover {
+            background-color: #218838;
+        }
+
+        .btn-pedir {
+            background-color: #28a745;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn-pedir:hover {
+            background-color: #218838;
+        }
+
+        .btn-fechar {
+            background-color: red;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-fechar:hover {
+            background-color: #23272b;
+        }
+
+        .sumario {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .sumario p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container-box">
+        
+        <div class="header">
+            <div class="header-logo">
+                <img src="/pds-main/imagens/logo.jpeg" alt="Logo">
+                <div class="header-title">VENDA PARA ENTREGA</div>
+            </div>
+            <div class="header-icons">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user-circle ml-3"></i> 
+            </div>
+        </div>
+
+  
+        <div class="header" style="margin-bottom: 10px;">
+            <div class="header-title">
+               Entrega 13 | Venda #12.300
+            </div>
+            <div>
+                <button class="btn-return">Retornar</button>
+                <button class="btn-cancelar">Cancelar Pedido</button>
+                <button class="btn-transferir">Tempo de entrega</button>
+                
+            </div>
+        </div>
+
+        <div class="add-item-section">
+            <input type="text" placeholder="Adicionar item...">
+            <button><i class="fas fa-plus"></i> Adicionar</button>
+        </div>
+
+        <table class="table-items">
+            <thead>
+                <tr>
+                    <th>Lista de Itens</th>
+                    <th>Valor Unit.</th>
+                    <th>Qtde.</th>
+                    <th>Soma</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pizza GG (1/2 Calabresa, 1/2 Frango Catupiry)</td>
+                    <td>R$ </td>
+                    <td>2</td>
+                    <td>R$ </td>
+                </tr>
+                <tr>
+                    <td>Coca Cola 1L</td>
+                    <td>R$ </td>
+                    <td>1</td>
+                    <td>R$ </td>
+                </tr>
+                <tr>
+                    <td>Batata Frita Grande</td>
+                    <td>R$ </td>
+                    <td>1</td>
+                    <td>R$ </td>
+                </tr>
+                <tr>
+                    <td>Suco de Laranja Natural 1L</td>
+                    <td>R$ </td>
+                    <td>1</td>
+                    <td>R$ </td>
+                </tr>
+                <tr>
+                    <td>Água Mineral Sem Gás</td>
+                    <td>R$ </td>
+                    <td>3</td>
+                    <td>R$ </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="sumario">
+            <p>Subtotal: R$ </p>
+            <p>(+5% taxa de serviço)</p>
+            <p>Total: R$ </p>
+        </div>
+
+        <button class="btn-pedir">Enviar Pedido</button>
+        <button class="btn-fechar">Fechar a Conta</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Pizzariba Fecha Periodo de Vendas</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/periodo.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!--Modal de Senha do Usuário-->
+   <div class="todo">
+        <div id="topo">
+          <div class="row">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#senhaModal">
+                Olhe Pedro o que sei fazer
+            </button>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal Fechar Período -->
+<div class="modal fade" id="senhaModal" tabindex="-1" aria-labelledby="senhaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="senhaModalLabel">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <b class="margin">ATENÇÃO</b>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="letrasparagrafo">
+                    Apenas usuários autorizados podem fechar período de vendas. Por favor, digite a sua senha:
+                </p>
+                <div class="container form-container">
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <input type="password" class="form-control" placeholder="Senha:">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#caixaModal" data-bs-dismiss="modal">
+                                        Confirmar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Conferência de Caixa -->
+<div class="modal fade" id="caixaModal" tabindex="-1" aria-labelledby="caixaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="caixaModalLabel">Conferência de Turno de Caixa</h5>
+            </div>
+            <div class="modal-body">
+                <p>Informativo da diferença entre o valor informado pelo operador do caixa no final do período de venda e do valor calculado pelo sistema:</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Informado pelo usuário</th>
+                            <th scope="col">Calculado pelo sistema</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dinheiro:</td>
+                            <td>R$</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>PIX:</td>
+                            <td>R$</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Cartão de Crédito:</td>
+                            <td>R$</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Cartão de Débito:</td>
+                            <td>R$</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Conta Assinada:</td>
+                            <td>R$</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Vales (V.A. / V.R.):</td>
+                            <td>R$</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Descontos:</td>
+                            <td>R$</td>
+                            <td>R$</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="total-text">Total:</td>
+                            <td>R$</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="sobra-falta-container">
+                    <label for="sobraFalta">Sobra / Falta:</label>
+                    <input type="text" id="sobraFalta" class="form-control" placeholder="R$">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">✖</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Conferencia" >CONFIRMAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Conferencia" tabindex="-1" aria-labelledby="Conferencialabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Conferencialabel">Conferência de Turno de Caixa</h5>
+            </div>
+            <div class="modal-body">
+                <p>Informativo da diferença entre o valor informado pelo operador do caixa no final do período de venda e do valor calculado pelo sistema:</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição:</th>
+                            <th scope="col">Valor Conferido:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dinheiro:</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>PIX:</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Cartão de Crédito:</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Cartão de Débito:</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Conta Assinada:</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Vales (V.A. / V.R.):</td>
+                            <td>R$</td>
+                        </tr>
+                        <tr>
+                            <td>Descontos:</td>
+                            <td>R$</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <div class="sobra-falta-container">
+                    <label for="sobraFalta">Total:</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">✖</button>
+                <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#Confirmacao" >CONFIRMAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal de Confirmação de Fechamento de Caixa-->
+<div class="modal fade" id="Confirmacao" tabindex="-1" aria-labelledby="ConfirmacaoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ConfirmacaoLabel">ATENÇÃO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja encerrar período de vendas atual?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i> Cancelar
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Confirmacao2">
+                    <i class="bi bi-check2"></i> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Confirmacao2" tabindex="-1" aria-labelledby="Confirmacao2Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Confirmacao2Label">Sangria Efetuada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="mensagemConfirmacao">O periodo de vendas do dia 19/09/2024 do caixa do usuário Elias Abreu encerrado com sucesso.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                    <i class="bi bi-check2"></i> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    var senhaModal = new bootstrap.Modal(document.getElementById('senhaModal'));
+    senhaModal.show();
+</script>
+</body>
+</html>

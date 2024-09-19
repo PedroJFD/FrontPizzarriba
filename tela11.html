@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atenção - Senha de Autorização</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #e5e5e5; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .modal-box {
+      background-color: #f8e8d4; 
+      color: black;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+    .modal-header {
+      background-color: red; 
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .modal-body {
+      padding: 20px;
+      font-size: 14px;
+    }
+    .input-group {
+      margin: 20px 0;
+    }
+    .btn-confirmar {
+      background-color: #28a745; 
+      border: none;
+      padding: 10px;
+      color: white;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .btn-confirmar:hover {
+      background-color: #218838;
+    }
+    .icon-aviso {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal-box">
+  <div class="modal-header d-flex justify-content-center align-items-center">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/error.png" class="icon-aviso" alt="Atenção">
+    <span>ATENÇÃO</span>
+  </div>
+  <div class="modal-body">
+    <p>Apenas usuários autorizados podem acessar essa função. Por favor, digite sua senha:</p>
+    <div class="input-group">
+      <input type="password" class="form-control" placeholder="Senha" aria-label="Senha">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fas fa-key"></i></span>
+      </div>
+    </div>
+    <button class="btn btn-confirmar">CONFIRMAR</button>
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Pizzariba Principal</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/abrircaixa.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!--Modal de Senha do Usuário-->
+   <div class="todo">
+    <div id="topo">
+        <h3 class="letras"><i class="bi bi-exclamation-triangle-fill"></i><b class="margin">ATENÇÃO</b></h3>
+    </div>
+    <p class="letrasparagrafo">Apenas usuários autorizados podem realizar abertura de caixa. Por favor, digite a sua senha:</p>
+    <div class="container form-container">
+        <form>
+            <div class="row">
+                <div class="form-group col-12">
+                    <input type="password" class="form-control" placeholder="Senha:">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-12">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#selecionarDataModal">Confirmar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</div>
+
+    <!-- Modal de Seleção de Data -->
+    <div class="modal fade" id="selecionarDataModal" tabindex="-1" aria-labelledby="selecionarDataLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="selecionarDataLabel">Seleção de Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Por favor, selecione a data e a hora de abertura do caixa:</p>
+                    <div class="container">
+                        <div class="date-time-group">
+                            <label for="data">Data:</label>
+                            <div class="date-container">
+                                <input type="date" id="data" class="form-control">
+                            </div>
+                        </div>
+    
+                        <div class="date-time-group">
+                            <label>Hora:</label>
+                            <div class="time-group">
+                                <input type="number" id="hora" class="form-control" placeholder="h" min="0" max="23">
+                                <input type="number" id="minuto" class="form-control" placeholder="m" min="0" max="59">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmarVendaModal"><i class="bi bi-check2"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação de Abertura de Período de Vendas -->
+    <div class="modal fade" id="confirmarVendaModal" tabindex="-1" aria-labelledby="confirmarVendaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmarVendaLabel">ATENÇÃO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que deseja abrir um novo período de vendas?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i> Cancelar</button>
+                    <button type="button" class="btn btn-success"><i class="bi bi-check2"></i> Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Caixa Aberto -->
+    <div class="modal fade" id="caixaAbertoModal" tabindex="-1" aria-labelledby="caixaAbertoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="caixaAbertoLabel">CAIXA ABERTO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p id="caixaAbertoMessage">O caixa N.001 foi aberto o período de vendas com início em [DATA] às [HORÁRIO].</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"><i class="bi bi-check2"></i> OK</button>
+                </div>
+            </div>
+        </div>
+    </div>>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const confirmarButton = document.querySelector('#confirmarVendaModal .btn-success');
+            confirmarButton.addEventListener('click', function () {
+                // Pega a data e hora do modal de seleção de data
+                const data = document.querySelector('#data').value;
+                const hora = document.querySelector('#hora').value;
+                const minuto = document.querySelector('#minuto').value;
+        
+                //Formata a hora e minuto para dois dígitos
+                const horaFormatada = String(hora).padStart(2, '0');
+                const minutoFormatado = String(minuto).padStart(2, '0');
+        
+                // Atualiza a mensagem no modal Caixa Aberto
+                const mensagem = `O caixa N.001 foi aberto o período de vendas com início em ${data} às ${horaFormatada}:${minutoFormatado}.`;
+                document.querySelector('#caixaAbertoMessage').textContent = mensagem;
+        
+                // Abre o modal Caixa Aberto
+                const caixaAbertoModal = new bootstrap.Modal(document.getElementById('caixaAbertoModal'));
+                caixaAbertoModal.show();
+            });
+        });
+    </script>
+</body>
+
+</html>

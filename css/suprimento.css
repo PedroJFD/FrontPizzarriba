@@ -1,0 +1,108 @@
+/* Estilo do modal */
+.modal-content {
+    background-color: #F7EAD3;
+    margin: auto;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.modal-header {
+    background-color: #A43232;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    padding: 15px;
+}
+
+.modal-title {
+    color: white;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body .letrasparagrafo {
+    margin: 0;
+}
+
+.form-container {
+    padding: 0 15px;
+}
+
+.modal-body .letrasparagrafo {
+    margin-bottom: 20px; /* Ajuste o valor conforme necessário */
+}
+
+/* Ajusta a largura do campo de senha */
+.form-group input.form-control {
+    border-radius: 4px;
+    border: 1px solid #A43232;
+    max-width: 400px; /* Ajuste o valor conforme necessário */
+    margin: 0 auto; /* Centraliza o campo */
+}
+
+/* Espaço entre o campo de senha e o botão de confirmação */
+.mt-4 {
+    margin-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+/* Centraliza o botão de confirmação */
+.d-flex.justify-content-center {
+    text-align: center; /* Centraliza o conteúdo do flex container */
+}
+
+
+.btn-success:hover {
+    background-color: #8c2b2b;
+    border-color: #8c2b2b;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o rótulo e a caixa de texto */
+}
+
+/* Ajusta a largura da caixa de texto */
+.form-group input.form-control {
+    width: auto; /* Permite que o campo de texto se ajuste ao tamanho necessário */
+}
+
+/* Centraliza os botões no modal footer */
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilo do botão de confirmar */
+.btn-success {
+    background-color: #28a745; /* Verde padrão para o botão de sucesso */
+    border-color: #28a745; /* Cor da borda do botão de sucesso */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Verde escuro para o hover */
+    border-color: #1e7e34; /* Cor da borda do botão de sucesso no hover */
+}
+/* Centraliza o texto no corpo do modal */
+.modal-body p {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 10px; /* Ajuste o valor conforme necessário para reduzir o espaço entre o texto e os botões */
+}
+
+/* Estilo dos botões no rodapé do modal */
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os botões */
+}

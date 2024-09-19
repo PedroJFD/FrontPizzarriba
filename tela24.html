@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação de Cancelamento</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .modal-confirmar {
+      background-color: #f8e8d4; 
+      color: black;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 350px;
+      max-height: 250px;
+      text-align: center;
+    }
+    .modal-confirmar .header {
+      background-color: #b00; 
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+      
+    }
+    .modal-confirmar .header img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+    .modal-confirmar .mensagem {
+      font-size: 14px;
+      margin: 20px 0;
+      color: black; 
+    }
+ 
+
+    .modal-confirmar .btn-confirmar {
+      background-color: #28a745;
+      color: white;
+      width: 80px;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal-confirmar">
+  <div class="header">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/error.png" alt="Atenção">
+    <span>Tempo de entrega</span>
+  </div>
+  <div class="mensagem">
+   O pedido ainda não foi enviado para a produção e portanto não saiu para a entrega.
+  </div>
+  <div class="buttons">
+    
+    <button class="btn btn-confirmar">✔</button>
+  </div>
+</div>
+
+</body>
+</html>

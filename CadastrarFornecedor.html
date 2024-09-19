@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Exemplo de Menu</title>
+</head>
+<body>
+    <div class="page">
+        <nav class="slidebar">
+            <div class="container">
+                <a href="MenuInicial.html" class="">
+                    <img src="img/logo.png" class="logo">
+                </a>
+            </div>
+            <div class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#meumenu" aria-controls="meumenu"
+                aria-expanded="false" aria-label="Menu Exemplo">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="meumenu">
+                    <ul class="nav flex-column">
+                        <ul class="profile">
+                            <li class="nav-item active-profile esp">
+                                <a class="nav-link" href="MenuInicial.html"><img src="img/fotoperfil.jpg" class="fotoperfil"> Ryan Gosling</a>
+                            </li>   
+                            <li class="nav-item active-profile notify">
+                                <a href="" class="nav-link"><i class="bi bi-bell-fill"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="linha">
+                        <li class="nav-item">
+                            <a class="nav-link" href="MenuInicial.html"><i class="bi bi-house-fill esp"></i> Menu Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="ConsultarIngrediente.html"><i class="bi bi-box-seam-fill esp"></i> Ingrediente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarProduto.html"><i class="bi bi-bucket-fill esp"></i> Produto</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ConsultarFornecedor.html"><i class="bi bi-truck-front-fill esp"></i> Fornecedor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarFuncionario.html"><i class="bi bi-person-arms-up esp"></i> Funcionário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarCliente.html"><i class="bi bi-people-fill esp"></i> Cliente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="RelatorioCliente.html"><i class="bi bi-clipboard-fill esp"></i> Relatório</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarUsuario.html"><i class="bi bi-person-circle esp"></i> Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GerenciarEstoque.html"><i class="bi bi-truck esp"></i> Estoque</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GerenciarCaixa.html"><i class="bi bi-cash-stack esp"></i> Caixa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GerenciarVendas.html"><i class="bi bi-cart2 esp"></i> Venda</a>
+                        </li>
+                    </ul>
+                </div>
+           </div>
+        </nav>
+        <main class="main">
+            <div class="container">
+                <h1>CADASTRAR FORNECEDOR</h1>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-3">
+                        <label for="">NOME:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="">TELEFONE:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="">ID:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="">CPF:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-4">
+                        <label for="">EMAIL:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="">CPF:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="">CNPJ:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-4">
+                        <label for="">INSCRIÇÃO ESTADUAL:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <h4 class="esp-form-top">ENDEREÇO</h4>
+                <div class="row">
+                    <div class="form-group col-3">
+                        <label for="">RUA:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="">NÚMERO:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="">CIDADE:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-3 esp-form">
+                        <label for="">BAIRRO:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-floating esp-form">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Complemento</label>
+                </div>
+                <a href=""><button class="btn btn-warning">Copiar <i class="bi bi-copy"></i></button></a>
+                <a href="#"><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirModal">Excluir <i class="bi bi-x-circle"></i></button></a>
+                <a href=""><button class="btn btn-success">Salvar <i class="bi bi-floppy"></i></button></a>
+
+                <div class="modal fade" id="excluirModal" tabindex="-1" aria-labelledby="excluirModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="emailModalLabel">Excluir</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Confirmar exclusão?</h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Não</i></button>
+                            <button class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="confirmarModal" tabindex="-1" aria-labelledby="confirmarModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="emailModalLabel">Excluir</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>O cadastro foi salvo com sucesso.</h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Exemplo de Menu</title>
+</head>
+<body>
+    <div class="page">
+        <nav class="slidebar">
+            <div class="container">
+                <a href="MenuInicial.html" class="">
+                    <img src="img/logo.png" class="logo">
+                </a>
+            </div>
+            <div class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#meumenu" aria-controls="meumenu"
+                aria-expanded="false" aria-label="Menu Exemplo">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="meumenu">
+                    <ul class="nav flex-column">
+                        <ul class="profile">
+                            <li class="nav-item active-profile esp">
+                                <a class="nav-link" href="MenuInicial.html"><img src="img/fotoperfil.jpg" class="fotoperfil"> Ryan Gosling</a>
+                            </li>   
+                            <li class="nav-item active-profile notify">
+                                <a href="" class="nav-link"><i class="bi bi-bell-fill"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="linha">
+                        <li class="nav-item">
+                            <a class="nav-link" href="MenuInicial.html"><i class="bi bi-house-fill esp"></i> Menu Inicial</a>
+                        </li>
+                        <li class="nav-item active">
+                        <a class="nav-link" href="ConsultarIngrediente.html"><i class="bi bi-box-seam-fill esp"></i> Ingrediente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarProduto.html"><i class="bi bi-bucket-fill esp"></i> Produto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarFornecedor.html"><i class="bi bi-truck-front-fill esp"></i> Fornecedor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarFuncionario.html"><i class="bi bi-person-arms-up esp"></i> Funcionário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarCliente.html"><i class="bi bi-people-fill esp"></i> Cliente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="RelatorioCliente.html"><i class="bi bi-clipboard-fill esp"></i> Relatório</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ConsultarUsuario.html"><i class="bi bi-person-circle esp"></i> Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GerenciarEstoque.html"><i class="bi bi-truck esp"></i> Estoque</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GerenciarCaixa.html"><i class="bi bi-cash-stack esp"></i> Caixa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GerenciarVendas.html"><i class="bi bi-cart2 esp"></i> Venda</a>
+                        </li>
+                    </ul>
+                </div>
+           </div>
+        </nav>
+        <main class="main">
+            <div class="container">
+                    <h1>CONSULTAR INGREDIENTE</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="form-group col-8">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-danger" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group col-4">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecionar</option>
+                                <option value="1">Null</option>
+                                <option value="2">Null</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group esp-form esp-form-top">
+                            <a href="CadastrarIngrediente.html"><button type="button" class="btn btn-light col-1"><i class="bi bi-plus-circle"></i></button></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-1">
+                            <label for="">ID:</label>
+                            <input type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="">NOME:</label>
+                            <input type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="">QUANTIDADE EM ESTOQUE:</label>
+                            <input type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group col-auto esp-form-top">
+                            <a href="EditarIngrediente.html"><button type="button" class="btn btn-light"><i class="bi bi-pencil"></i></button></a>
+                        </div>
+                        <div class="form-group col-auto esp-form-top">
+                            <button type="button" class="btn btn-light"><i class="bi bi-trash3"></i></button>
+                        </div>
+                    </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

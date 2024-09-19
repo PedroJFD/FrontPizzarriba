@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Pizzariba Sangria</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sangria.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!--Modal de Senha do Usuário-->
+   <div class="todo">
+        <div id="topo">
+          <div class="row">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#senhaModal">
+                Olhe Pedro o que sei fazer
+            </button>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal Usuario Sangria -->
+<div class="modal fade" id="senhaModal" tabindex="-1" aria-labelledby="senhaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="senhaModalLabel">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <b class="margin">ATENÇÃO</b>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="letrasparagrafo">
+                    Apenas usuários autorizados podem realizar sangria. Por favor, digite a sua senha:
+                </p>
+                <div class="container form-container">
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <input type="password" class="form-control" placeholder="Senha:">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ValorRetirada">
+                                        Confirmar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal de valor da retirada-->
+<div class="modal fade" id="ValorRetirada" tabindex="-1" aria-labelledby="ValorRetiradaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ValorRetiradaLabel">Sangria</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Qual o valor da retirada que você deseja efetuar?</p>
+                <input type="text" id="valorSuprimento" class="form-control" placeholder="R$:">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i> Cancelar
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#RetirarValor">
+                    <i class="bi bi-check2"></i> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal de Confirmação de Sangria-->
+<div class="modal fade" id="RetirarValor" tabindex="-1" aria-labelledby="RetirarValorlabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="RetirarValorlabel">ATENÇÃO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja retirar o valor informado como sangria do período atual de vendas?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i> Cancelar
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Confirmacao">
+                    <i class="bi bi-check2"></i> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal de Confirmação-->
+
+<div class="modal fade" id="Confirmacao" tabindex="-1" aria-labelledby="ConfirmacaoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ConfirmacaoLabel">Sangria Efetuada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="mensagemConfirmacao">Foi efetuado a sangria no valor informado.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                    <i class="bi bi-check2"></i> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

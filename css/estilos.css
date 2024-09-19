@@ -1,0 +1,74 @@
+body {
+    background-color: white;
+}
+.header {
+    background-color: #808080;
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.table-container {
+    background-color: #f8e8d4;;
+    color: black;
+    padding: 20px;
+}
+.btn-custom {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.btn-retornar {
+    background-color: #4CAF50;
+    color: white;
+}
+.btn-cancelar {
+    background-color: #e53935;
+    color: white;
+}
+.btn-transferir {
+    background-color: #1976D2;
+    color: white;
+}
+.btn-desconto {
+    background-color: #FFB300;
+    color: white;
+}
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.summary div {
+    margin-right: 15px;
+}
+.order-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+}
+.close-btn {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+}
+.add-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.add-item-container input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+.add-item-container button {
+    padding: 5px 15px;
+}

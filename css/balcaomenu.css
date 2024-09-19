@@ -1,0 +1,27 @@
+.container1 {
+    max-width: 1200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 28px;
+}
+.container2 {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.row2{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.espaco{
+    margin-bottom: 3%;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesa</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-box {
+            background-color: #f8e8d4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 500px;
+            text-align: center;
+        }
+
+        .op3 {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .op3 div {
+            background-color: #6c757d;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .op3 .po2 {
+            background-color: #dc3545;
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .btn-table {
+            background-color: #dc3545;
+            color: #fff;
+            font-size: 18px;
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-add {
+            background-color: #28a745;
+            color: #fff;
+            font-size: 30px;
+            border-radius: 50%; 
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-box">
+        <div class="op3">
+            <div class="po2">MESA</div>
+            <div>ENTREGA</div>
+            <div>BALCÃO</div>
+        </div>
+
+        <div class="buttons-grid">
+            <button class="btn-table">01</button>
+            <button class="btn-table">02</button>
+            <button class="btn-table">03</button>
+            <button class="btn-table">04</button>
+            <button class="btn-table">05</button>
+            <button class="btn-table">06</button>
+            <button class="btn-table">07</button>
+            <button class="btn-table">08</button>
+            <button class="btn-table">09</button>
+            <button class="btn-table">10</button>
+            <button class="btn-table">11</button>
+            <button class="btn-table">12</button>
+            <button class="btn-table">13</button>
+        </div>
+
+        <button class="btn-add">+</button>
+    </div>
+</body>
+</html>

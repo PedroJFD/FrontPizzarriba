@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estoquemenu.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title>Retirar Estoque</title>
+    </head>
+    <body>
+        <div class="todo">
+                <div id="topo">
+                    <h3 class="letras"><i class="bi bi-box-fill"></i><b class="margin">Retirada de Estoque</b></h3>
+                </div>
+                <div class="tamanho">
+                    <p class="letrasparagrafo">Informe o produto, tipo de unidade e a quantidade:</p>
+                    <form>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="textos">Produto:</p>
+                                </div>
+
+                                <div class="col-6">
+                                    <select class="form-control">
+                                        <option>Selecione um produto</option>
+                                        <option>protudo1</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="textos">Tipo de unidade:</p>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="textos">Quantidade:</p>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-12">
+                                    <a type="button" class="btn btn-success ad" href="GerenciarEstoque.html"><i class="bi bi-arrow-return-left"></i></a>
+                                    <button type="button" class="btn btn-success ad" data-bs-toggle="modal" data-bs-target="#selecionarPxModal">RETIRAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+
+        <div class="modal fade" id="selecionarPxModal" tabindex="-1" aria-labelledby="selecionarDataLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Pronto!</h5>
+                    </div>
+                    <div class="modal-body">  
+                            <p id="para">O produto informado foi retirado com sucesso na quantidade indicada.</p>
+                            <button type="button" class="btn btn-success ag" data-bs-toggle="modal"><i class="bi bi-check2"></i></button>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>

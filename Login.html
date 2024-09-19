@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pizzarriba</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-card">
+        <div class="login-left text-center">
+            <img src="img/pizzariba.png" alt="Panda Logo">
+            <p>(69) 3422-3600</p>
+            <p>Rua Menezes Filho, #164, Bairro Jardim dos Migrantes, Ji-Paraná (RO)</p>
+        </div>
+        <div class="login-right">
+            <h3 class="mb-4">Login</h3>
+            <form>
+                <div class="form-group">
+                    <label for="email">E-mail de Login:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                </div>
+                <div class="mb-3">
+                    <!-- Botão para abrir o primeiro modal -->
+                    <a href="#" class="forgot-password" data-bs-toggle="modal" data-bs-target="#emailModal">Esqueci minha senha</a>
+                </div>
+                <a href="MenuInicial.html"><button type="submit" class="btn btn-green">Entrar</button></a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para inserir e-mail -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="emailModalLabel">Recuperar Senha</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="forgotPasswordForm">
+              <div class="form-group">
+                  <label for="emailReset">Digite seu e-mail</label>
+                  <input type="email" class="form-control" id="emailReset" placeholder="Digite seu e-mail" required>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-green" id="sendEmailBtn">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Modal de Alerta -->
+<div class="modal fade alerta-modal" id="alertaModal" tabindex="-1" aria-labelledby="alertaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="alertaModalLabel">Alerta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          O e-mail informado deve ter sido cadastrado anteriormente e com nível de acesso <strong>auxil.administrativo</strong> ou <strong>administrativo</strong>.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-green btn-ok" id="closeAlertaModal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Modal 2 - Alterar Senha -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal2Label">Alterar Senha</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="novaSenha">Nova Senha:</label>
+              <input type="password" class="form-control" id="novaSenha" placeholder="Digite a nova senha" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="confirmarSenha">Confirmar Senha:</label>
+              <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme a nova senha" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-green btn-ok" id="closeModal2">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+<!-- Modal 3 - Alerta de Senhas Iguais -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal3Label">Alerta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>As senhas devem ser iguais.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-green btn-ok" id="closeAllModals">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+      // Controla a sequência de exibição dos modais
+      document.getElementById('sendEmailBtn').addEventListener('click', function() {
+          // Fecha o modal de e-mail
+          var emailModal = bootstrap.Modal.getInstance(document.getElementById('emailModal'));
+          emailModal.hide();
+          
+          // Abre o modal de alerta
+          var alertaModal = new bootstrap.Modal(document.getElementById('alertaModal'));
+          alertaModal.show();
+      });
+  
+      // Quando o modal de alerta é fechado, abre o modal 2
+      document.getElementById('closeAlertaModal').addEventListener('click', function() {
+          var alertaModal = bootstrap.Modal.getInstance(document.getElementById('alertaModal'));
+          alertaModal.hide();
+  
+          var modal2 = new bootstrap.Modal(document.getElementById('modal2'));
+          modal2.show();
+      });
+  
+      // Quando o modal 2 é fechado, abre o modal 3
+      document.getElementById('closeModal2').addEventListener('click', function() {
+          var modal2 = bootstrap.Modal.getInstance(document.getElementById('modal2'));
+          modal2.hide();
+  
+          var modal3 = new bootstrap.Modal(document.getElementById('modal3'));
+          modal3.show();
+      });
+      document.getElementById('closeAllModals').addEventListener('click', function() {
+        var modal3 = bootstrap.Modal.getInstance(document.getElementById('modal3'));
+        modal3.hide(); // Fecha o modal 3
+
+        // Se existirem outros modais abertos, eles também serão fechados
+        var modal2 = bootstrap.Modal.getInstance(document.getElementById('modal2'));
+        if (modal2) {
+            modal2.hide(); // Fecha o modal 2
+        }
+    });
+  </script>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

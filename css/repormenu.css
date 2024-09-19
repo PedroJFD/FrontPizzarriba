@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    background-image: url("../img/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.slidebar{
+    background-color: #A43232;
+    display: flex;
+    border-top-right-radius: 0px;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.logo{
+    width: 110px;
+    object-position: -10px;
+}
+.fotoperfil{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+}
+.profile{
+    display: flex;
+    padding: 0px;
+    height: 65px;
+}
+.notify{   
+    padding: 9px 5px 0px 5px;
+}
+.esp{
+    margin-right: 15px;
+}
+.af{
+    margin-left: 210%;
+}
+.letras {
+    color: white;
+}
+.grid{
+    margin-top: 5px;
+    width: 100%;
+    height:100%;
+
+}
+.table-summary {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:10px;
+}
+
+
+
+
+.container1{
+    width: 60%;
+    padding-top: 35px;
+    margin-left: 20%;
+}
+
+.adc{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.search-bar input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #AAA;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td{
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+table th{
+    background-color:  #A43232;
+}
+
+table td{
+    background-color: #c17548;
+}
+
+.aw{
+   margin-left: 86%;
+}

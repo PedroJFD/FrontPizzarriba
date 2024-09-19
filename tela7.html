@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Observação do Pedido</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .modal-observacao {
+      background-color: #f8e8d4; 
+      color: black;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px; 
+      width: 100%; 
+      text-align: center;
+    }
+    .modal-observacao .header {
+      background-color: #b00; 
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+    }
+    .modal-observacao .header img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+    .modal-observacao .mensagem {
+      font-size: 14px;
+      margin: 20px 0;
+      color: black;
+    }
+    .modal-observacao textarea {
+      width: 100%;
+      height: 80px; 
+      border-radius: 5px;
+      border: none;
+      padding: 10px;
+      background-color: #eee; 
+      color: black;
+    }
+    .modal-observacao .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .modal-observacao .btn-confirmar {
+      background-color: #28a745;
+      color: white;
+      width: 50px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal-observacao">
+  <div class="header">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/speech-bubble.png" alt="Observação">
+    <span>OBSERVAÇÃO</span>
+  </div>
+  <div class="mensagem">
+    Digite uma observação para o pedido:
+  </div>
+  <textarea placeholder="Digite aqui"></textarea>
+  <div class="buttons">
+    <button class="btn btn-confirmar">✔</button>
+  </div>
+</div>
+
+</body>
+</html>

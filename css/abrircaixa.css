@@ -1,0 +1,218 @@
+/* Estilos gerais */
+.todo {
+    background-color: #F7EAD3;
+    margin-left: 40%;
+    margin-top: 10%;
+    margin-right: 40%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+#topo {
+    background-color: #A43232;
+    border-radius: 4px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 8%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.letras {
+    margin-left: 5%;
+    color: white;
+}
+
+.letrasparagrafo {
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.margin {
+    margin-left: 16%;
+}
+
+.row {
+    margin-left: 28%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.roww {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Estilos para o modal */
+
+.letras {
+    color: white;
+}
+
+.margin {
+    margin-left: 16%;
+}
+
+.letrasparagrafo {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.form-container {
+    margin-top: 15px;
+}
+
+.row {
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.modal-header {
+    background-color: #A43232;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #F7EAD3;
+    border-top: none;
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    padding: 10px;
+}
+.modal-footer .btn {
+    width: 120px; /* Ajusta a largura dos botões */
+    margin: 0 10px; /* Adiciona margem para espaçar os botões */
+}
+
+.modal-footer .btn-danger {
+    background-color: #A43232;
+    border: none;
+}
+
+.modal-footer .btn-success {
+    background-color: #4CAF50;
+    border: none;
+}
+
+.date-time-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    margin-bottom: 15px;
+}
+
+.date-time-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.date-container input[type="date"] {
+    flex: 1; /* Faz o calendário ocupar o espaço restante */
+    max-width: 200px; /* Ajusta o tamanho máximo do calendário */
+}
+
+.time-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.time-group input {
+    width: 60px; /* Ajuste o tamanho dos campos de hora e minuto */
+}
+.modal-body .container {
+    padding: 0;
+}
+.modal-content {
+    background-color: #F7EAD3;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.modal-header {
+    background-color: #A43232;
+    color: white;
+    border-radius: 6px 6px 0 0;
+    padding: 15px;
+}
+
+.modal-title {
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.modal-body {
+    background-color: #F7EAD3;
+    padding: 20px;
+    border-radius: 0 0 6px 6px;
+}
+
+.modal-footer {
+    background-color: #F7EAD3; /* Cor de fundo corrigida */
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.modal-footer .btn-danger {
+    background-color: #A43232;
+    border: none;
+}
+
+.modal-footer .btn-success {
+    background-color: #4CAF50;
+    border: none;
+}
+
+input[type="date"],
+input[type="number"] {
+    border: 1px solid #A43232;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para o modal Caixa Aberto */
+#caixaAbertoModal .modal-body {
+    background-color: #F7EAD3;
+    padding: 20px;
+}
+
+#caixaAbertoModal .modal-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+#caixaAbertoModal .modal-body p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+#caixaAbertoModal .modal-footer {
+    background-color: #F7EAD3;
+    border-top: none;
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+    padding: 10px;
+}
+
+#caixaAbertoModal .btn-success {
+    background-color: #4CAF50;
+    border: none;
+    width: 120px; /* Ajusta a largura do botão */
+}
