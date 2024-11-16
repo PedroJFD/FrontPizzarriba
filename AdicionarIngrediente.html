@@ -37,7 +37,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="MenuInicial.html"><i class="bi bi-house-fill esp"></i> Menu Inicial</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                         <a class="nav-link" href="ConsultarIngrediente.html"><i class="bi bi-box-seam-fill esp"></i> Ingrediente</a>
                         </li>
                         <li class="nav-item">
@@ -49,7 +49,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="ConsultarFuncionario.html"><i class="bi bi-person-arms-up esp"></i> Funcionário</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="ConsultarCliente.html"><i class="bi bi-people-fill esp"></i> Cliente</a>
                         </li>
                         <li class="nav-item">
@@ -73,7 +73,7 @@
         </nav>
         <main class="main">
             <div class="container">
-                    <h1>CONSULTAR CLIENTE</h1>
+                    <h1>ADICIONAR INGREDIENTE</h1>
                     <hr>
                     <div class="row">
                         <div class="form-group col-8">
@@ -88,23 +88,66 @@
                             </select>
                         </div>
                     </div>
+                    <hr>
                     <div class="row">
-                        <div class="esp-form esp-form-top d-md-flex justify-content-md-end bottom-add">
-                            <a href="CadastrarCliente.html"><button type="button" class="btn btn-light">NOVO CLIENTE</button></a>
+                        <div class="form-group col-3">
+                            <label for="">ID:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-3">
+                            <label for="">NOME:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-3">
+                            <label for="">MEDIDA:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecionar medida</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-3">
+                            <label for="">QUANTIDADE:</label>
+                            <input type="text" class="form-control">
                         </div>
                     </div>
-                    <div class="row">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                  <th scope="col">#</th>
-                                  <th scope="col">CPF</th>
-                                  <th scope="col">NOME</th>
-                                  <th scope="col">TELEFONE</th>
-                                  <th scope="col">E-MAIL</th>
-                                </tr>
-                              </tbody>
-                        </table>
+                    <div class="col esp-form-top">
+                        <a href=""><button class="btn btn-warning">Copiar <i class="bi bi-copy"></i></button></a>
+                        <a href="#"><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirModal">Excluir <i class="bi bi-x-circle"></i></button></a>
+                        <a href="#"><button class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#confirmarModal">Salvar <i class="bi bi-floppy"></i></button></a>
+                    </div>
+    
+                    <div class="modal fade" id="excluirModal" tabindex="-1" aria-labelledby="excluirModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="excluirModalLabel">Excluir</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>Confirmar exclusão?</h1>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal">Não</i></button>
+                                <button class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+    
+                    <div class="modal fade" id="confirmarModal" tabindex="-1" aria-labelledby="confirmarModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="confirmarModalLabel">Excluir</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>O cadastro foi salvo com sucesso.</h1>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                            </div>
+                          </div>
+                        </div>
                     </div>
             </div>
         </main>
